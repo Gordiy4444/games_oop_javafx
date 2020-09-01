@@ -4,7 +4,7 @@ public class Win {
     public static boolean monoHorizontal(int[][] board, int row) {
         boolean result = true;
         for (int index = 0; index < board.length; index++) {
-            if (board[row][index] != 'X') {
+            if (board[row][index] != 1) {
 
                 result = false;
 
@@ -20,7 +20,7 @@ public class Win {
         boolean result = true;
         for (int i = 0; i < board.length; i++) {
 
-            if (board[i][column] != 'X') {
+            if (board[i][column] != 1) {
                 result = false;
                 break;
 
@@ -32,7 +32,7 @@ public class Win {
     public static boolean check(int[][] board) {
         boolean result = false;
         for (int m = 0; m < board.length; m++) {
-            if (board[m][m] == 'X') {
+            if (board[m][m] == 1) {
                 if (monoHorizontal(board, m) || monoVertical(board, m)) {
                     result = true;
                     break;
