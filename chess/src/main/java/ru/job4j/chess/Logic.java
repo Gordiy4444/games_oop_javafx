@@ -21,8 +21,17 @@ public final class Logic {
     }
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
-        return true;
-    }
+        for (int i = 0; i < figures.length; i++) {
+            Figure figure = figures[index];
+            for (int u = 0; u < figures.length; u++) {
+                Cell step = steps[u];
+                if (figure != null && figure.position().equals(steps[u])) {
+                }
+
+            }
+        }
+            return true;
+        }
 
     public void clean() {
         Arrays.fill(figures, null);
