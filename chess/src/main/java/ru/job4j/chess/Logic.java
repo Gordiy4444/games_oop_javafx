@@ -26,6 +26,7 @@ public final class Logic {
             for (int u = 0; u < figures.length; u++) {
                 Cell step = steps[u];
                 if (figure != null && figure.position().equals(steps[u])) {
+                     throws OccupiedCellException;
                 }
 
             }
