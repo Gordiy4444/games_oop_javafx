@@ -21,7 +21,15 @@ public class BishopBlack implements Figure {
                 String.format("Could not way by diagonal from %s to %s", position, dest)
         );
     }
-
+    int size = Cell.findBy(position().getX(), position().getY());
+    Cell[] steps = new Cell[size];
+    int deltaX =;
+    int deltaY =;
+    for (int index = 0; index < size; index++) {
+        steps[index] =
+    }
+    return steps;
+}
     public boolean isDiagonal(Cell source, Cell dest) {
         return false;
     }
