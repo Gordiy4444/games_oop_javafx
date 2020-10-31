@@ -13,7 +13,6 @@ public class LogicTest {
         BishopBlack Bb = new BishopBlack(Cell.E3);
         logic.add(new BishopBlack(Cell.C1));
         logic.move(Cell.C1, Cell.H6);
-        Cell[] cells = Bb.way(Cell.G5);
-        Cell[] dells = new Cell[];
+
     }
 }
