@@ -1,7 +1,7 @@
 package ru.job4j.chess;
 
 public class ImpossibleMoveException extends Exception {
-    ImpossibleMoveException(String ch){
+    public ImpossibleMoveException(String ch){
      super(ch);
     }
 }
