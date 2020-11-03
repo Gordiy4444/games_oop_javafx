@@ -21,18 +21,15 @@ public final class Logic {
     }
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
-        for (int i = 0; i < figures.length; i++) {
-            Figure figure = figures[index];
-            for (int u = 0; u < steps.length; u++) {
-                Cell step = steps[u];
+        for (Figure figure : figures) {
+            for (Cell step : steps) {
                 if (figure != null && figure.position().equals(step)) {
-                     throw new  OccupiedCellException();
+                    throw new OccupiedCellException("");
                 }
-
             }
         }
-            return true;
-        }
+        return true;
+    }
 
     public void clean() {
         Arrays.fill(figures, null);
@@ -46,6 +43,6 @@ public final class Logic {
                 return index;
             }
         }
-        throw new FigureNotFoundException();
+        throw new FigureNotFoundException("");
     }
 }
